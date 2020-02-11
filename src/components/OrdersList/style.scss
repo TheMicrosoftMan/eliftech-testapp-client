@@ -1,0 +1,45 @@
+.OrdersList {
+  @include block();
+  
+  &__table {
+    $b-radius: 100px;
+
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    box-shadow: 0 0 40px 0 rgba(231, 203, 203, 0.15);
+
+    th,
+    td {
+      font-weight: unset;
+    }
+
+    thead {
+      padding-top: 16px;
+      border-bottom: 1px solid rgb(237, 235, 233);
+      height: 42px;
+      line-height: 42px;
+
+      th {
+        color: rgb(50, 49, 48);
+        text-align: left;
+        font-weight: 600;
+        padding: 0px 32px 0px 12px;
+        box-sizing: border-box;
+      }
+    }
+
+    tbody {
+      border-bottom: 1px solid rgb(243, 242, 241);
+
+      td {
+        font-size: 1rem;
+        color: gray;
+        color: rgb(96, 94, 92);
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(243, 242, 241);
+        padding: 11px 32px 11px 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.Paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include block();
+
+  &__count {
+    box-sizing: border-box;
+    padding: 0 1rem;
+  }
+
+  &__btn {
+    @include button-white();
+  }
+}

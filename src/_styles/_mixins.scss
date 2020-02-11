@@ -1,0 +1,55 @@
+@mixin block() {
+  max-width: 1000px;
+width: 100%;
+  background: #fff;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
+    0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin button() {
+  text-decoration: none;
+  display: inline-block;
+
+  text-align: center;
+  padding: 0px 1rem;
+  border-radius: 2px;
+  min-width: 80px;
+  height: 32px;
+
+  cursor: pointer;
+}
+
+@mixin button-white() {
+  @include button();
+
+  border: 1px solid rgb(138, 136, 134);
+  background-color: rgb(255, 255, 255);
+  color: rgb(50, 49, 48);
+
+  &:hover {
+    background-color: rgb(243, 242, 241);
+    color: rgb(32, 31, 30);
+  }
+}
+
+@mixin button-blue() {
+  @include button();
+
+  border: 1px solid rgb(0, 120, 212);
+  background-color: rgb(0, 120, 212);
+  color: rgb(255, 255, 255);
+
+  &:hover {
+    background-color: rgb(16, 110, 190);
+    border: 1px solid rgb(16, 110, 190);
+    color: rgb(255, 255, 255);
+  }
+}
