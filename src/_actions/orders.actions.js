@@ -11,7 +11,6 @@ export const getOrders = page => dispatch => {
       });
     })
     .catch(err => {
-      console.error(err);
       dispatch({
         type: ordersConstants.GET_ORDERS_ERROR,
         payload: err
@@ -33,13 +32,12 @@ export const uploadOrdersFile = file => dispatch => {
         resolve();
       })
       .catch(err => {
-        console.error(err);
         dispatch({
           type: ordersConstants.UPLOAD_ORDERS_ERROR,
-          payload: err
+          payload: err.response.data.message
         });
 
-        reject(err);
+        reject(err.response.data.message);
       });
   });
 };

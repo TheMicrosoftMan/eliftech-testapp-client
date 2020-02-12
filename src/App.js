@@ -18,7 +18,7 @@ const App = ({ orders, pending, getOrders, uploadOrdersFile }) => {
   const sendFile = file => {
     if (file)
       uploadOrdersFile(file)
-        .then(alert("Success"))
+        .then(() => alert("Success"))
         .catch(err => alert(`Error:\n${err}`));
   };
 
