@@ -1,0 +1,8 @@
+.Report {
+  @include block();
+
+  &__btn {
+    width: 100%;
+    @include button-blue();
+  }
+}

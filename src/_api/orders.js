@@ -2,7 +2,7 @@ import axios from "axios";
 
 const server = "http://localhost:3001/api";
 
-export const getOrdersAPI = (page) => {
+export const getOrdersAPI = page => {
   return axios.get(`${server}/orders/${page}`);
 };
 
@@ -13,5 +13,11 @@ export const uploadOrdersFileAPI = file => {
     headers: {
       "Content-Type": "multipart/form-data"
     }
+  });
+};
+
+export const getReportAPI = () => {
+  return axios.get(`${server}/export/`, {
+    responseType: "blob"
   });
 };

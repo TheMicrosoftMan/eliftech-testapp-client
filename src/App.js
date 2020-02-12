@@ -4,6 +4,7 @@ import { getOrders, uploadOrdersFile } from "./_actions/orders.actions";
 import { OrdersList } from "./components/OrdersList";
 import { FileUploader } from "./components/FileUploader";
 import { Paging } from "./components/Paging";
+import { Report } from "./components/Report";
 import { Spinner } from "./components/Spinner";
 
 const App = ({ orders, pending, getOrders, uploadOrdersFile }) => {
@@ -32,6 +33,7 @@ const App = ({ orders, pending, getOrders, uploadOrdersFile }) => {
       <FileUploader sendFile={sendFile} />
       <OrdersList orders={orders} />
       <Paging goToPage={goToPage} />
+      <Report />
     </div>
   );
 };
